@@ -10,7 +10,7 @@ def main(args):
         param1 (args) :
 
     """
-    pathname = "search_results-256/param.json"
+    pathname = "search_results/param.json"
     counter = 1
     for fc1 in [64, 128, 256]:
         for fc2 in [64, 128, 256]:
@@ -25,7 +25,7 @@ def main(args):
                                 --fc3_units {fc3} \
                                 --clip {c} \
                                 --lr {lr}')
-                counter += 1
+                        counter += 1
 
 
 

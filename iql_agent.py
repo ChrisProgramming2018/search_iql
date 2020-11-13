@@ -88,9 +88,9 @@ class Agent():
         self.steps = 0
         self.predicter = Classifier(state_size, action_size, self.seed).to(self.device)
         self.optimizer_pre = optim.Adam(self.predicter.parameters(), lr=self.lr_pre)
-        pathname = "lr_{}_batch_size_{}_fc1_{}_fc2{}_fc3{}_seed_{}".format(self.lr, self.batch_size, self.fc1, self.fc2, self.fc3, self.seed)
-        pathname += "clip-{}".format(config["clip"])
-        pathname += "tau-{}".format(config["tau"])
+        pathname = "lr_{}_batch_size_{}_fc1_{}_fc2_{}_fc3_{}_seed_{}".format(self.lr, self.batch_size, self.fc1, self.fc2, self.fc3, self.seed)
+        pathname += "_clip_{}".format(config["clip"])
+        pathname += "_tau_{}".format(config["tau"])
         now = datetime.now()    
         dt_string = now.strftime("%d_%m_%Y_%H:%M:%S")
         pathname += dt_string

@@ -49,10 +49,10 @@ def train(env, config):
             text = "Train Predicter {}  \ {}  time {}  \r".format(t, config["predicter_time_steps"], time_format(time.time() - t0))
             print(text, end = '')
             agent.learn(memory)
-            if t % 50 == 0:
+            if t % 5 == 0:
                 print(text)
                 agent.test_predicter(memory)
-            if t % 100 == 0:
+            if t % 10 == 0:
                 agent.test_policy()
 
     if config["mode"] == "dqn":
